@@ -1,8 +1,5 @@
 import React from "react";
 
-
-import { GrChapterPrevious, GrChapterNext } from 'react-icons/gr';
-
 export const Next = ({ color, size, title, className }) => {
   return (
     <svg

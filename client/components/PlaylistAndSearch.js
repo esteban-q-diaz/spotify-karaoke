@@ -208,19 +208,7 @@ const PlaylistAndSearch = ({ loggedOut, loggedIn, setCode }) => {
           </PlaylistTabText>
         </PlaylistTab>
 
-        {/* <Logout>
-          <NavList>
-            <RiLogoutCircleLine />
-          </NavList>
-          <PlaylistTabText>
-            Log out
-          </PlaylistTabText>
-        </Logout> */}
-
-
-
       </Tabs>
-      <div><h1>fshdfjkh</h1></div>
       <List>
         <Playlist viewPlaylist={viewPlaylist} />
         <SearchDrawer viewPlaylist={viewPlaylist} />
