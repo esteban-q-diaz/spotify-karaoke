@@ -13,12 +13,12 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
-li {
+/* li {
   margin-bottom: -10px;
   margin-left: 40px;
   margin-top: 25px;
   margin-right: 20px;
-}
+} */
 
 a {
   text-decoration: none;
@@ -201,6 +201,13 @@ a {
   height: 1100px;
   background-color: #2941ab;
   color: #fff;
+}
+iframe {
+  width: 45vmin;
+  height: 25vmin;
+  margin-top: 5vmin;
+  margin-bottom: 5vmin;
+
 }
 
 .title {
@@ -440,20 +447,22 @@ button:focus {
 
 /* ----------- MOUSE SCROLL ------------*/
 .mouse_scroll {
-	display: block;
+  display: block;
   position: fixed;
   top: 40%;
   right: 0;
-	/* margin: 0 auto;
+  /* margin: 0 auto;
 	width: 24px;
 	height: 100px; */
 	margin-right: 80px;
   cursor: pointer;
 }
 
+.mouse_scroll:hover {
+  cursor: pointer;
+}
 
-.m_scroll_arrows
-{
+.m_scroll_arrows {
   display: block;
   width: 5px;
   height: 5px;
@@ -469,51 +478,45 @@ button:focus {
   height: 16px;
 }
 
-
-.unu
-{
+.unu {
   margin-top: 1px;
 }
 
-.unu, .doi, .trei
-{
-    -webkit-animation: mouse-scroll 1s infinite;
-    -moz-animation: mouse-scroll 1s infinite;
-    animation: mouse-scroll 1s infinite;
-
+.unu,
+.doi,
+.trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
 }
 
-.unu
-{
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
+.unu {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
   -webkit-animation-direction: alternate;
 
   animation-direction: alternate;
   animation-delay: alternate;
 }
 
-.doi
-{
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
+.doi {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
   -webkit-animation-direction: alternate;
 
-  animation-delay: .2s;
+  animation-delay: 0.2s;
   animation-direction: alternate;
 
   margin-top: -6px;
 }
 
-.trei
-{
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
+.trei {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
   -webkit-animation-direction: alternate;
 
-  animation-delay: .3s;
+  animation-delay: 0.3s;
   animation-direction: alternate;
-
 
   margin-top: -6px;
 }
@@ -539,7 +542,7 @@ button:focus {
   width: 4px;
   border: 2px solid rgba(232, 232, 232, 1);
   -webkit-border-radius: 8px;
-          border-radius: 8px;
+  border-radius: 8px;
 }
 
 .wheel {
@@ -548,8 +551,8 @@ button:focus {
   animation: mouse-wheel 0.6s linear infinite;
 }
 
-@-webkit-keyframes mouse-wheel{
-   0% {
+@-webkit-keyframes mouse-wheel {
+  0% {
     opacity: 1;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -564,50 +567,98 @@ button:focus {
   }
 }
 @-moz-keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 @-o-keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 @keyframes mouse-wheel {
-
-   0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 
 @-webkit-keyframes mouse-scroll {
-
-  0%   { opacity: 0;}
-  50%  { opacity: .5;}
-  100% { opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-moz-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-o-keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes mouse-scroll {
-
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

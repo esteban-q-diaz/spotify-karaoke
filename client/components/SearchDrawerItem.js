@@ -8,6 +8,7 @@ const SongContainer = styled.li`
   height: 3rem;
   position: relative;
   padding: 0.3rem;
+  margin-right: 0.5rem;
   border-radius: 5px;
   transition: 200ms ease-out;
   border: 1px solid transparent;
@@ -22,10 +23,8 @@ const SongContainer = styled.li`
 
 const ImageAndText = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   height: 100%;
-  max-width: 70%;
+  max-width: 90%;
 `;
 
 const TextContainer = styled.div`
@@ -34,12 +33,12 @@ const TextContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   margin: 0 0.7rem;
-  max-width: 90%;
+  max-width: 70%;
 `;
 
 const Title = styled.h4`
   margin: 0;
-  font-size: 0.9rem;
+  font-size: ${(props) => props.theme.fontSizes.listTitleSize};
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -48,11 +47,11 @@ const Title = styled.h4`
 
 const Artist = styled.p`
   margin: 0;
-  font-size: 0.8rem;
+  font-size: ${(props) => props.theme.fontSizes.listArtistSize};
 `;
 
 const Image = styled.img`
-  height: 100%;
+  object-fit: contain;
 `;
 
 const Plus = styled.div`
@@ -81,12 +80,13 @@ const SearchDrawerItem = ({ track }) => {
           <Artist>{track.artist}</Artist>
         </TextContainer>
       </ImageAndText>
+
       {!added && (
         <Plus>
           <AiOutlinePlus size={25} />
         </Plus>
       )}
-      {added && <Plus>Added!</Plus>}
+      {/* {added && <Plus>Added!</Plus>} */}
     </SongContainer>
   );
 };

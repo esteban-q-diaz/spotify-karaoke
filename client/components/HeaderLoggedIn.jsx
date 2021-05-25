@@ -80,6 +80,10 @@ function HeaderLoggedIn({ dashboardRef }) {
           <Button>MY PLAYLIST</Button>
         </Link>
       </ButtonContainer>
+      <br/>
+      <div className='video'>
+        <iframe src="https://www.youtube.com/embed/tc85Ajjor5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <IconContainer onClick={handleIconClick}>
         <ChevronIcon />
       </IconContainer>

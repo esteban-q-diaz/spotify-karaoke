@@ -9,13 +9,10 @@ const SongContainer = styled.div((props) => ({
   height: '3rem',
   position: 'relative',
   padding: '0.3rem',
+  marginRight: '0.5rem',
   borderRadius: '5px',
   boxShadow: props.playing && 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
   backgroundColor: props.playing && '#6B1171',
-
-  // border: props.playing
-  //   ? `1px solid ${props.theme.colors.primary}`
-  //   : '1px solid transparent',
 }));
 
 const TextContainer = styled.div`
@@ -33,7 +30,7 @@ const TextContainer = styled.div`
 
 const Title = styled.h4`
   margin: 0;
-  font-size: 0.9rem;
+  font-size: ${(props) => props.theme.fontSizes.listTitleSize};
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -42,7 +39,7 @@ const Title = styled.h4`
 
 const Artist = styled.p`
   margin: 0;
-  font-size: 0.8rem;
+  font-size: ${(props) => props.theme.fontSizes.listArtistSize};
 `;
 
 const Image = styled.img`
@@ -76,21 +73,23 @@ function PlaylistItem({ song, index }) {
 
   return (
     <SongContainer playing={isPlaying()}>
-      <Image
-        src={song.albumUrl}
-        onClick={() => {
-          selectPlaylistTrack(index);
-        }}
-      />
+      <div style={{ display: 'flex', height: '100%', width: '90%' }}>
+        <Image
+          src={song.albumUrl}
+          onClick={() => {
+            selectPlaylistTrack(index);
+          }}
+        />
 
-      <TextContainer
-        onClick={() => {
-          selectPlaylistTrack(index);
-        }}
-      >
-        <Title>{song.title}</Title>
-        <Artist>{song.artist}</Artist>
-      </TextContainer>
+        <TextContainer
+          onClick={() => {
+            selectPlaylistTrack(index);
+          }}
+        >
+          <Title>{song.title}</Title>
+          <Artist>{song.artist}</Artist>
+        </TextContainer>
+      </div>
 
       <TrashCan
         onClick={() => {

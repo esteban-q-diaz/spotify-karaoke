@@ -21,7 +21,8 @@ import PlaylistAndSearch from './PlaylistAndSearch';
 
 const theme = {
   colors: {
-    primary: 'linear-gradient(114deg, rgba(0,102,255,1) 0%, rgba(189,1,255,1) 100%)',
+    primary:
+      'linear-gradient(114deg, rgba(0,102,255,1) 0%, rgba(189,1,255,1) 100%)',
     secondary: '#ee7a62',
     button: '#1BB954',
     buttonHover: '#00FFC2',
@@ -30,7 +31,10 @@ const theme = {
     textHover: '#FAA75B',
     lyricsBg: '#e9c46a',
     lyricsText: 'white',
-
+  },
+  fontSizes: {
+    listTitleSize: '0.8rem',
+    listArtistSize: '0.7rem',
   },
 };
 
@@ -74,8 +78,8 @@ function App() {
               </Route>
 
               <Route path='/playlist' exact>
+                <PlaylistAndSearch setCode={setCode} code={code} loggedIn />
                 <Lyrics />
-                <PlaylistAndSearch setCode={setCode} code={code} loggedIn/>
               </Route>
             </Switch>
           </ScrollToTop>
